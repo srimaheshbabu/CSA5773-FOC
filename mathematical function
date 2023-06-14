@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <math.h>
+
+int power(int x, int n) {
+    return pow(x, n);
+}
+
+int add(int x, int n) {
+    return x + n;
+}
+
+int subtract(int x, int n) {
+    return x - n;
+}
+
+int divide(int x, int n) {
+    if (n == 0) {
+        printf("Error: Division by zero!\n");
+        return 0;
+    }
+    return x / n;
+}
+
+int main() {
+    int x, n, choice;
+
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Choose a mathematical function:\n");
+    printf("1. Power (x^n)\n");
+    printf("2. Add (x + n)\n");
+    printf("3. Subtract (x - n)\n");
+    printf("4. Divide (x / n)\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Power (x^n) = %d\n", power(x, n));
+            break;
+        case 2:
+            printf("Add (x + n) = %d\n", add(x, n));
+            break;
+        case 3:
+            printf("Subtract (x - n) = %d\n", subtract(x, n));
+            break;
+        case 4:
+            printf("Divide (x / n) = %d\n", divide(x, n));
+            break;
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
