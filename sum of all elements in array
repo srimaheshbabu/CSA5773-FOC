@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int array[10];
+    int n, i, sum = 0;
+
+    printf("Enter the number of elements to store in the array (Max 10): ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the array:\n");
+    for (i = 0; i < n; i++) {
+        printf("Element-%d: ", i + 1);
+        scanf("%d", &array[i]);
+        sum += array[i];
+    }
+
+    printf("The sum of the array is: %d\n", sum);
+
+    return 0;
+}
